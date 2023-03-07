@@ -1,13 +1,18 @@
 <template>
   <h1>Search for a movie title:</h1>
   <p>Your web service to obtain movie information.</p>
-  <div id="searchBar">
+  <div class="nav-container">
     <input 
       type="text" 
+      placeholder="Type something..."
       v-model="searchQuery" 
       @keydown.enter="getMovie" 
+      class="search"
     />
-    <button @click="getMovie">SEARCH</button>
+    <button 
+      @click="getMovie"
+      class="button"
+    >SEARCH</button>
   </div>
   <ul>
     <MovieCard
@@ -43,7 +48,7 @@ export default {
       this.searchQuery = "";
       this.url = "http://www.omdbapi.com/?s=";
       console.log(this.details);
-    },
+    }
   },
   computed: {
     details() {
@@ -72,10 +77,38 @@ ul {
   padding:0;
 }
 
-@media (min-width: 768px) {
-  .button {
-    padding: 13px 50px 13px;
+.nav-container {
+  flex-direction: column;
+  margin-bottom: 35px;
+}
+
+.search {
+  max-width: 100%;
+  padding: 10px;
+}
+
+@media (min-width: 700px) {
+  .nav-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 40px;
+    max-width: 600px; 
+    margin: 0 auto; 
   }
+
+  .search {
+    flex: 1;
+    max-width: 100%;
+    padding: 10px;
+    margin:0;
+  }
+
+  .button {
+    flex: 1;
+    max-width:20%;
+  }
+  
 }
 
 </style>

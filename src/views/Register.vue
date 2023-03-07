@@ -19,6 +19,7 @@
           register() {
               localStorage.setItem('username', this.username)
               localStorage.setItem('password', this.password)
+              console.log("You have been successfully registered")
           }
       }
   }

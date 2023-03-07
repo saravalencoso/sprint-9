@@ -29,7 +29,7 @@
           return alert('Wrong password')
         }
   
-        console.log('Success')
+        console.log('You are logged in')
       }
     },
   };

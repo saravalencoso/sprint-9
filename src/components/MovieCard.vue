@@ -24,11 +24,11 @@ export default {
 
 <template>
     <div class="container">
-      <img class="poster" :src="poster" />
-      <div class="details">
+      <img class="left" :src="poster" />
+      <div class="right">
         <h2>{{ title }}</h2>
         <h3>{{ year }}</h3>
-        <!-- <p>{{ plot }}</p> -->
+        <p>{{ plot }}</p>
       </div>
     </div>
   </template>
@@ -39,17 +39,26 @@ export default {
         display: flex;
         flex-direction: row;
         align-items: center;
-        margin: 35px;
+        margin-bottom: 35px;
+        max-width: 750px; 
+        margin: 0 auto; 
+        height: 100%; 
     }
 
-    .poster {
+    .left {
+        flex: 1;
         max-width: 100%;
         margin-right: 20px;
+        margin-bottom: 20px;
     }
 
-    .details {
+    .right {
         flex: 1;
-        margin-top: 35px;
+        margin: 0; 
+    }
+
+    img {
+        border: 10px solid white;
     }
 
     @media (max-width: 700px) {
@@ -58,12 +67,12 @@ export default {
             margin-bottom: 35px;
         }
 
-        .poster {
+        .left {
             margin-right: 0;
             margin-bottom: 20px;
         }
 
-        .details {
+        .right {
             margin-top: 0;
         }
     }

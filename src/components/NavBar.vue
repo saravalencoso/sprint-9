@@ -32,7 +32,6 @@ nav ul {
   overflow: hidden;
   display:inline-block;
   justify-content: space-around;
-  text-align:center;
 }
 
 nav li {
@@ -41,6 +40,7 @@ nav li {
   font-size: 0.7em;
   font-weight: 700;
   margin:0 20px 0 20px;
+  text-align:center;
 }
 
 nav li a {
@@ -64,7 +64,14 @@ li:hover {
 
   nav li {
     float: none;
+    text-align:center;
   }
+
+  li:hover {
+    text-decoration: underline;
+    color: #231F20;
+  }
+
 }
 
 </style>

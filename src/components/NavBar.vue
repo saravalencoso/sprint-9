@@ -39,6 +39,7 @@ nav li {
   float: left;
   font-family: 'Raleway', sans-serif;
   font-size: 0.7em;
+  font-weight: 700;
   margin:0 20px 0 20px;
 }
 
@@ -50,7 +51,7 @@ nav li a {
   color: #231F20;
 }
 
-a:hover {
+li:hover {
   text-decoration: underline;
   color: #231F20;
 }

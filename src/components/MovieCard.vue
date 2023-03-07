@@ -23,15 +23,49 @@ export default {
 </script>
 
 <template>
-    <h2>{{ title }}</h2>
-    <h3>{{ year }}</h3>
-    <!-- <p>{{ plot }}</p> -->
-    <img :src="poster" />
-</template>
+    <div class="container">
+      <img class="poster" :src="poster" />
+      <div class="details">
+        <h2>{{ title }}</h2>
+        <h3>{{ year }}</h3>
+        <!-- <p>{{ plot }}</p> -->
+      </div>
+    </div>
+  </template>
 
 <style lang="css">
-    h2 {
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 35px;
+    }
+
+    .poster {
+        max-width: 100%;
+        margin-right: 20px;
+    }
+
+    .details {
+        flex: 1;
         margin-top: 35px;
+    }
+
+    @media (max-width: 700px) {
+        .container {
+            flex-direction: column;
+            margin-bottom: 35px;
+        }
+
+        .poster {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+
+        .details {
+            margin-top: 0;
+        }
     }
 
 </style>
